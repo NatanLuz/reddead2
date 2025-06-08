@@ -354,7 +354,8 @@ footer .btn:hover {
     z-index: 1000;
     padding: 1rem 0;
     transition: all 0.3s ease;
-    border-bottom: 1px solid var(--rdr-red);
+    border-bottom: 2px solid var(--rdr-red);
+    backdrop-filter: blur(10px);
 }
 
 .nav-content {
@@ -368,10 +369,11 @@ footer .btn:hover {
 
 .logo {
     color: var(--rdr-red);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
     text-transform: uppercase;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
 }
 
 .nav-links {
@@ -383,18 +385,118 @@ footer .btn:hover {
 .nav-links a {
     color: var(--rdr-light);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    color: var(--rdr-red);
+    background: rgba(196, 30, 58, 0.1);
+    transform: translateY(-2px);
 }
 
 .nav-links a i {
     font-size: 1.2rem;
 }
 
-.nav-links a:hover {
+/* Estilos do Menu */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--rdr-light);
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.menu-toggle:hover {
     color: var(--rdr-red);
+    transform: scale(1.1);
+}
+
+/* Responsividade do Menu */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-content {
+        padding: 0 1.5rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 400px;
+        height: 100vh;
+        background: rgba(26, 26, 26, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+        transition: all 0.4s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        padding: 1rem;
+        width: 100%;
+        text-align: left;
+        font-size: 1.2rem;
+        border-radius: 8px;
+    }
+
+    .nav-links a:hover {
+        background: rgba(196, 30, 58, 0.2);
+        padding-left: 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-content {
+        padding: 0 1rem;
+    }
+
+    .nav-links {
+        width: 100%;
+        padding: 2rem 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .menu-toggle {
+        font-size: 1.5rem;
+    }
 }
 
 /* Sessao hero  */

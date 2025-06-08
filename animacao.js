@@ -68,18 +68,45 @@ document.querySelectorAll('.section > *').forEach(element => {
 
 //por mais que nao desenvolva com js utilizar esses elementos, codigo em si foi essencial para a construçao do site xd
 
-// Menu Hamburguer
-document.querySelector('.menu-toggle').addEventListener('click', function() {
-    const navLinks = document.querySelector('.nav-links');
+// Menu com animação suave
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+const body = document.body;
+
+menuToggle.addEventListener('click', function() {
     navLinks.classList.toggle('active');
+    body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+});
+
+// Fecha o menu ao clicar em um link ou fora dele
+document.addEventListener('click', function(e) {
+    const isMenuClick = menuToggle.contains(e.target);
+    const isNavClick = navLinks.contains(e.target);
     
-    // Fecha o menu ao clicar em um link
-    const links = navLinks.querySelectorAll('a');
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-        });
+    if (!isMenuClick && !isNavClick && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        body.style.overflow = '';
+    }
+});
+
+// Fecha o menu ao clicar em um link
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        body.style.overflow = '';
     });
+});
+
+// Ajusta o menu ao redimensionar a janela
+let resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            body.style.overflow = '';
+        }
+    }, 250);
 });
 
 
