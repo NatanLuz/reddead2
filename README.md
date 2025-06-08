@@ -123,4 +123,8 @@ Contribuições são bem-vindas! Sinta-se à vontade para:
 
 ## 📞 Contato
 
-Para questões e sugestões, por favor abra uma issue no repositório.
+Para questões e sugestões, por favor abra uma issue no repositório ou se preferir 
+
+Linkedin : https://www.linkedin.com/in/natan-da-luz-3156582a2/
+
+Email: Natandaluz01@gmail.com
