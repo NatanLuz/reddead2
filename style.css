@@ -1,0 +1,1141 @@
+/* Resetando as margens e paddings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --rdr-red: #c41e3a;
+    --rdr-dark: #1a1a1a;
+    --rdr-light: #f5f5f5;
+    --rdr-gold: #d4af37;
+}
+
+/* estilo geral */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--rdr-dark);
+    color: var(--rdr-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Cabeçalho do site  */
+
+header {
+    background-color: #000; 
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: #e74c3c; 
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12; 
+}
+
+/* main sessao principal */
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    color: #e74c3c; 
+    margin-bottom: 1.5rem;
+}
+
+main p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilizando para o menu responsivo */
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    main p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    main h1 {
+        font-size: 1.5rem;
+    }
+
+    main p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilo do conteiner  das imagens */
+
+.image-container {
+    margin: 20px auto;
+    text-align: center;
+    max-width: 800px; 
+}
+/* Ajusta o tamanho das imagens */
+
+img {
+    width: 70%; 
+    max-width: 600px; 
+    height: auto; 
+    margin-bottom: 15px; 
+}
+
+/* Estiliza o texto da descrição abaixo das imagens */
+
+
+.image-container p {
+    font-size: 1rem;
+    color: #ddd; 
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* Responsividade para as imagens anexadas */
+
+@media (max-width: 768px) {
+    .image-container img {
+        width: 90%; 
+    }
+}
+
+/* Estilos básicos para a página */
+
+ul {
+    list-style-type: none; 
+    padding-left: 0; 
+}
+
+/* Estilo do footer */
+
+footer {
+    background-color: #333; 
+    color: #e74c3c; 
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Estilo da galeria de imagens no site */
+section {
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 250px; /* aqui define o tamanho padrão das imagens */
+    height: auto; /* aqui mantem a proporção correta */
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* aqui faz uma transição suave */
+}
+
+.gallery img:hover {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Adiciona uma 'sombra' */
+}
+
+/* Animação para as imagens */
+
+.imagem-animada {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    animation: movimento 5s ease-in-out infinite;
+}
+
+@keyframes movimento {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    25% {
+        transform: scale(1.1) rotate(10deg);
+    }
+    50% {
+        transform: scale(1) rotate(0deg);
+    }
+    75% {
+        transform: scale(1.1) rotate(-10deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* Estilo da seção principal basico */
+
+main {
+    padding: 20px;
+}
+
+/* Estilo do rodapé 'fixo' */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+/* Estilo da galeria de imagens */
+
+section {
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* add espaçamento  entre as imagens */
+}
+
+.gallery img {
+    width: 250px; /* Define a largura das imagens para que fiquem do mesmo tamanho ou seja em tamanho sincronizado */
+    height: 150px; /* Define uma altura fixa para as imagens para n ficarem desproporcionais */
+    object-fit: cover; /* Faz a imagem cobrir o espaço disponível sem distorcer ou qualquer efeito que afete a visibilidade   */
+
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* adicionado um estilo  para o botão de link */
+
+
+.btn {
+    display: inline-block; /* Torna o link um botao clicavel animado */
+    background-color: #e74c3c; /* colocando cor de fundo  */
+    color: #fff; /* cor do Texto > branco */
+    padding: 5px 16px; /* aqui Reduzindo o padding */
+    font-size: 1rem; /* Tamanho de fonte menor */
+    text-decoration: none; /* Remove o sublinhado do link */
+    border-radius: 2px; /* Bordas arredondadas pq para mim fica mais bonito  */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    margin-top: 10px; /* Add um espaço acima do botão efetivo para responsividade */
+}
+
+.btn:hover {
+    background-color: #f39c12; /* mostra uma cor de fundo ao passar o mouse */
+}
+
+
+footer {
+    text-align: center; /* Alinha o texto no 'centro' */
+    font-size: 0.9rem; /* Tamanho de fonte reduzido para o rodapé */
+    padding: 10px 0; /* add o espaçamento superior e inferior mais leve */
+}
+
+footer a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #e74c3c; /* Cor do link */
+}
+
+footer a:hover {
+    color: #f39c12; /* Cor do link quando o mouse passa por cima */
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    position: relative; /* garantindo que o conteúdo fique organizado */
+    clear: both; /* Impede que o botão seja sobreposto por outros elementos deixando mais organizado  */
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+footer .btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #1DB954;  /* Cor verde do Spotify */
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-top: 10px; /* Espaço entre o texto do rodapé e o botão */
+
+    transition: background-color 0.3s ease;
+}
+
+footer .btn:hover {
+    background-color: #1ed760; 
+}
+
+
+.image-container {
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.image-container p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.curiosidades {
+    padding: 15px;
+    background-color: #0c0b0b;
+}
+
+.curiosidades ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.curiosidades ul li {
+    margin-bottom: 10px;
+}
+
+/* config a Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(26, 26, 26, 0.95);
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid var(--rdr-red);
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    color: var(--rdr-red);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--rdr-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-links a i {
+    font-size: 1.2rem;
+}
+
+.nav-links a:hover {
+    color: var(--rdr-red);
+}
+
+/* Sessao hero  */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)),
+                url('img/arthur2.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--rdr-light);
+    padding: 0 2rem;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--rdr-red);
+    animation: titleReveal 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    animation: textFadeIn 2s ease-out 0.5s forwards;
+    opacity: 0;
+    position: relative;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    border-left: 4px solid var(--rdr-red);
+}
+
+@keyframes titleReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.3) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    animation: gradientPulse 8s ease-in-out infinite;
+}
+
+@keyframes gradientPulse {
+    0%, 100% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 0.4;
+    }
+}
+
+/* config sessoes */
+.section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--rdr-red);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* arrumando o character grid */
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.character-card {
+    background: var(--rdr-dark);
+    border: 1px solid var(--rdr-red);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.character-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(196, 30, 58, 0.3);
+}
+
+.character-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.character-card h3 {
+    padding: 1rem;
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--rdr-red);
+}
+
+.character-card p {
+    padding: 0 1rem 1rem;
+    color: var(--rdr-light);
+}
+
+/* config World Showcase */
+
+.world-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.world-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--rdr-red);
+}
+
+.world-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.world-card:hover img {
+    transform: scale(1.05);
+}
+
+.world-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(transparent, rgba(26, 26, 26, 0.95));
+    color: var(--rdr-light);
+}
+
+.world-card-content h3 {
+    color: var(--rdr-red);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.world-card-content p {
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* estilizando a parte das missoes  */
+.mission-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    padding: 2rem;
+}
+
+.mission-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid var(--rdr-red);
+    box-shadow: 0 4px 8px rgba(196, 30, 58, 0.3);
+}
+
+.mission-text {
+    padding: 0;
+}
+
+.mission-text h3 {
+    color: var(--rdr-red);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.mission-categories {
+    list-style: none;
+    padding: 0;
+}
+
+.mission-category {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.mission-category::before {
+    content: '★';
+    color: var(--rdr-red);
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.mission-category h4 {
+    color: var(--rdr-gold);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.mission-category p {
+    color: var(--rdr-light);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.mission-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rdr-red);
+    font-style: italic;
+    color: var(--rdr-light);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .mission-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* sessao para arrumar a parte de atividades */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.activity-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--rdr-red);
+}
+
+.activity-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.activity-card:hover img {
+    transform: scale(1.05);
+}
+
+.activity-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(transparent, rgba(26, 26, 26, 0.95));
+    color: var(--rdr-light);
+}
+
+.activity-content h3 {
+    color: var(--rdr-red);
+    margin-bottom: 0.5rem;
+}
+
+.activity-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.activity-card:hover .activity-content p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* estilizando a sessao de soundtrack epica do game */
+.music-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.music-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(196, 30, 58, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.music-content img:hover {
+    transform: scale(1.02);
+}
+
+.music-text {
+    text-align: left;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8), transparent);
+    border-radius: 8px;
+}
+
+.music-text h3 {
+    color: var(--rdr-red);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.music-description {
+    color: var(--rdr-light);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.soundtrack-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.soundtrack-feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: var(--rdr-light);
+}
+
+.soundtrack-feature i {
+    color: var(--rdr-gold);
+    font-size: 1.2rem;
+}
+
+.spotify-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--rdr-red);
+    color: var(--rdr-light);
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.spotify-button:hover {
+    background-color: transparent;
+    border-color: var(--rdr-red);
+    transform: translateY(-3px);
+}
+
+.spotify-button i {
+    font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+    .music-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .music-text {
+        padding: 1.5rem;
+    }
+
+    .music-text h3 {
+        font-size: 1.8rem;
+    }
+}
+
+/* editando as Animaçoes simples  */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    animation: fadeIn 1s ease-out;
+}
+
+/* editando design responsivo */
+
+@media (max-width: 768px) {
+    .nav-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .mission-content,
+    .music-content {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 4rem 1rem;
+    }
+}
+
+/* config sessao da historia  */
+
+.story-section {
+    background-color: var(--rdr-dark);
+    position: relative;
+}
+
+.story-info {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.story-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.header-item i {
+    color: var(--rdr-red);
+    font-size: 2rem;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.header-item:hover i {
+    transform: scale(1.2);
+}
+
+.header-item span {
+    color: var(--rdr-light);
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+/* ajeitando e estilizando itens  específicos da timeline */
+
+.timeline-icon .fa-map-pin {
+    font-size: 1.2em;
+    color: var(--rdr-light);
+}
+
+.timeline-icon .fa-times {
+    font-size: 1.4em;
+    color: var(--rdr-light);
+}
+
+@media (max-width: 768px) {
+    .story-header {
+        gap: 2rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .header-item {
+        gap: 1rem;
+    }
+
+    .header-item i {
+        font-size: 1.6rem;
+        width: 35px;
+        height: 35px;
+    }
+
+    .header-item span {
+        font-size: 1.1rem;
+    }
+}
+
+/* sessao Timeline */
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: var(--rdr-red);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+    margin: 2rem 0;
+    width: 50%;
+    position: relative;
+}
+
+.timeline-item:nth-child(even) {
+    align-self: flex-end;
+    justify-content: flex-start;
+    padding-left: 30px;
+    padding-right: 0;
+    margin-left: 50%;
+}
+
+.timeline-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: var(--rdr-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -20px;
+    color: var(--rdr-light);
+    box-shadow: 0 0 10px rgba(196, 30, 58, 0.5);
+}
+
+.timeline-item:nth-child(even) .timeline-icon {
+    right: auto;
+    left: -20px;
+}
+
+.timeline-content {
+    background: rgba(196, 30, 58, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--rdr-red);
+    position: relative;
+    width: calc(100% - 40px);
+}
+
+.timeline-content h3 {
+    color: var(--rdr-red);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.timeline-content p {
+    color: var(--rdr-light);
+    line-height: 1.6;
+}
+
+/* container de temas da historia  */
+
+
+.story-themes {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem;
+    background: rgba(196, 30, 58, 0.1);
+    border-radius: 10px;
+    border: 1px solid var(--rdr-red);
+}
+
+.story-themes h3 {
+    color: var(--rdr-red);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.themes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.theme-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-item i {
+    font-size: 2rem;
+    color: var(--rdr-red);
+}
+
+.theme-item span {
+    color: var(--rdr-light);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.skull-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 2rem;
+    color: var(--rdr-red);
+}
+
+.skull-container .fa-plus-circle,
+.skull-container .fa-minus-circle {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+
+/* Honor Symbol */
+.honor-symbol {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin: 20px auto;
+}
+
+.honor-symbol::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: var(--rdr-red);
+    clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+    );
+    border: 2px solid var(--rdr-light);
+}
+
+.honor-symbol::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: var(--rdr-light);
+    clip-path: polygon(
+        50% 0,
+        100% 50%,
+        50% 100%,
+        0 50%
+    );
+}
+
+.honor-symbol-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.honor-symbol-container h3 {
+    color: var(--rdr-light);
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
