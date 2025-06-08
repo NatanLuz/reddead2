@@ -1080,7 +1080,7 @@ footer .btn:hover {
 }
 
 
-/* Honor Symbol */
+/* criando um simbolo de honra */
 .honor-symbol {
     width: 80px;
     height: 80px;
@@ -1138,4 +1138,196 @@ footer .btn:hover {
     color: var(--rdr-light);
     margin-top: 1rem;
     font-size: 1.2rem;
+}
+
+/* Melhorias na responsividade */
+@media (max-width: 1024px) {
+    .section {
+        padding: 4rem 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.3rem;
+        padding: 1.5rem;
+    }
+
+    .character-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .world-showcase {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    .nav-content {
+        padding: 0 1rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: rgba(26, 26, 26, 0.95);
+        flex-direction: column;
+        padding: 2rem 0;
+        transition: 0.3s ease;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links a {
+        padding: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+        margin-left: 0;
+        padding-left: 70px;
+    }
+
+    .timeline-icon {
+        left: 10px;
+        right: auto;
+    }
+
+    .timeline-item:nth-child(even) .timeline-icon {
+        left: 10px;
+    }
+
+    .themes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .music-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .music-text {
+        padding: 1rem;
+    }
+
+    .spotify-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    .character-card img {
+        height: 250px;
+    }
+
+    .world-card img {
+        height: 200px;
+    }
+
+    .theme-item i {
+        font-size: 1.5rem;
+    }
+
+    .theme-item span {
+        font-size: 0.9rem;
+    }
+
+    .mission-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .mission-category h4 {
+        font-size: 1.1rem;
+    }
+
+    .mission-category p {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Estilos do Menu  */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--rdr-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: var(--rdr-red);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }

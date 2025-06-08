@@ -68,4 +68,18 @@ document.querySelectorAll('.section > *').forEach(element => {
 
 //por mais que nao desenvolva com js utilizar esses elementos, codigo em si foi essencial para a construçao do site xd
 
+// Menu Hamburguer
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+    
+    // Fecha o menu ao clicar em um link
+    const links = navLinks.querySelectorAll('a');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+});
+
 
