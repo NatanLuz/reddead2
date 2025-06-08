@@ -79,6 +79,7 @@ menuToggle.addEventListener('click', function() {
 });
 
 // Fecha o menu ao clicar em um link ou fora dele
+
 document.addEventListener('click', function(e) {
     const isMenuClick = menuToggle.contains(e.target);
     const isNavClick = navLinks.contains(e.target);
@@ -90,6 +91,7 @@ document.addEventListener('click', function(e) {
 });
 
 // Fecha o menu ao clicar em um link
+
 navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
@@ -98,6 +100,7 @@ navLinks.querySelectorAll('a').forEach(link => {
 });
 
 // Ajusta o menu ao redimensionar a janela
+
 let resizeTimer;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
@@ -107,6 +110,30 @@ window.addEventListener('resize', () => {
             body.style.overflow = '';
         }
     }, 250);
+});
+
+// Animações da Timeline
+const timelineItems = document.querySelectorAll('.timeline-item');
+
+const timelineObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateX(0)';
+        }
+    });
+}, {
+    threshold: 0.2,
+    rootMargin: '0px'
+});
+
+timelineItems.forEach(item => {
+    item.style.opacity = '0';
+    item.style.transform = item.classList.contains('timeline-item:nth-child(even)') 
+        ? 'translateX(-50px)' 
+        : 'translateX(50px)';
+    item.style.transition = 'all 0.8s ease-out';
+    timelineObserver.observe(item);
 });
 
 

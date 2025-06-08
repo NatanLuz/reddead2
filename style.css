@@ -1055,7 +1055,7 @@ footer .btn:hover {
     position: relative;
     max-width: 1000px;
     margin: 4rem auto;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
 }
 
 .timeline::before {
@@ -1098,6 +1098,7 @@ footer .btn:hover {
     right: -20px;
     color: var(--rdr-light);
     box-shadow: 0 0 10px rgba(196, 30, 58, 0.5);
+    z-index: 2;
 }
 
 .timeline-item:nth-child(even) .timeline-icon {
@@ -1112,6 +1113,7 @@ footer .btn:hover {
     border: 1px solid var(--rdr-red);
     position: relative;
     width: calc(100% - 40px);
+    backdrop-filter: blur(5px);
 }
 
 .timeline-content h3 {
