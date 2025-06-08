@@ -109,11 +109,7 @@ O site está hospedado na Vercel e pode ser acessado em:
 
 **Natan Da Luz** - Desenvolvedor
 
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## 🤝 Contribuições
+## Contribuições Sempre bem vindas !
 
 Contribuições são bem-vindas! Sinta-se à vontade para:
 - Reportar bugs
@@ -121,7 +117,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para:
 - Enviar pull requests
 - E sugerir qual game posso por aqui hehe!
 
-## 📞 Contato
+## Contato
 
 Para questões e sugestões, por favor abra uma issue no repositório ou se preferir 
 
