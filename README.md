@@ -115,7 +115,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para:
 - Reportar bugs
 - Sugerir novas features
 - Enviar pull requests
-- E sugerir qual game posso por aqui hehe!
+- E sugerir qual game posso é o próximo a ter um site hehe!
 
 ## Contato
 
