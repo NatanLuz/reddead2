@@ -125,10 +125,6 @@ Edit the CSS files in style.css
 Modify animations in animacao.js
 Update content in index.html
 
-Deploy
-The site is hosted on Vercel and can be accessed at:
-https://reddead2-self.vercel.app/
-
 ## Author
 Natan Da Luz - Developer
 
