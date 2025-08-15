@@ -103,16 +103,15 @@ Small Desktop: 768px - 1024px
 
 Large Desktop: > 1024px
 
-## More Beautiful and Attractive Color Palette
-css
-Copiar
-Editar
+## More Beautiful and Attractive Color Palette CSS
 :root {
     --rdr-red: #c41e3a;    /* Main red */
     --rdr-dark: #1a1a1a;   /* Dark background */
     --rdr-light: #f5f5f5;  /* Light text */
     --rdr-gold: #d4af37;   /* Gold details */
 }
+
+
 How to Run?
 Clone the repository:
 
