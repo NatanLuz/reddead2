@@ -1,5 +1,16 @@
 ## Red Dead Redemption 2 - Responsive Website
 
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)]()
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)]()
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)]()
+[![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=flat&logo=font-awesome&logoColor=white)]()
+[![AOS](https://img.shields.io/badge/AOS-FF6F61?style=flat)]()
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)]()
+
+
+![Red Dead Project](https://i.imgur.com/iaMLEdc.jpeg)
+
+
 About the Project
 This project is a responsive website dedicated to the game Red Dead Redemption 2, developed with a focus on providing a consistent experience across all platforms. The site showcases key elements of the game such as story, characters, open world, and soundtrack, all adapted to work perfectly on any device.
 
