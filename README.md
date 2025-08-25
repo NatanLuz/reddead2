@@ -8,7 +8,7 @@
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)]()
 
 
-![Red Dead Project](https://i.imgur.com/iaMLEdc.jpeg)
+![Red Dead Project](https://i.imgur.com/iaMLEdc.jpeg) (https://www.youtube.com/watch?v=7tvEBNR_plQ)
 
 About the Project
 This project is a responsive website dedicated to the game Red Dead Redemption 2, developed with a focus on providing a consistent experience across all platforms. The site showcases key elements of the game such as story, characters, open world, and soundtrack, all adapted to work perfectly on any device.
