@@ -1,5 +1,7 @@
 ## Red Dead Redemption 2 - Website Responsivo
 
+
+
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)]()
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)]()
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)]()
@@ -15,7 +17,7 @@ Demo em vídeo: https://www.youtube.com/watch?v=7tvEBNR_plQ
 
 ## Sobre o Projeto
 
-Este projeto é um website totalmente responsivo dedicado ao jogo **Red Dead Redemption 2**, desenvolvido com foco em oferecer uma experiência consistente em todas as plataformas.
+Este projeto é um website totalmente responsivo dedicado ao jogo **Red Dead Redemption 2**, desenvolvido com foco em oferecer uma experiência consistente em todas as plataformas. Também desenvolvido para aprender e aperfeiçoar em conhecimentos sobre html, css e javascript.
 
 O site apresenta elementos-chave do jogo, como:
 
