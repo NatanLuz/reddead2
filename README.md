@@ -113,7 +113,7 @@ Opcional:
 
 ---
 
-## 📸 Screenshots
+## 📸 Screenshot
 
 <img src="https://i.imgur.com/iaMLEdc.jpeg" width="600">
 
