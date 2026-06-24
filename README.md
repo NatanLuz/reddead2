@@ -18,8 +18,11 @@ Construir uma interface web responsiva com foco em experiência do usuário, org
 **Benefícios principais:**
 
 - Experiência consistente entre diferentes dispositivos
+
 - Navegação fluida entre seções
+
 - Interface clara e bem estruturada
+
 - Uso de animações para melhoria de UX
 
 ---
