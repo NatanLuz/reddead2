@@ -1,4 +1,4 @@
-# Red Dead Redemption 2 - Website Responsivo
+# Red Dead Redemption 2 - Website 
 
 Aplicação web estática responsiva desenvolvida com HTML, CSS e JavaScript, inspirada no jogo _Red Dead Redemption 2_, com foco em experiência visual, navegação fluida e adaptação para múltiplos dispositivos.
 
@@ -44,7 +44,9 @@ Construir uma interface web responsiva com foco em experiência do usuário, org
 Separação de responsabilidades entre estrutura, apresentação e comportamento:
 
 - **HTML** → marcação semântica do conteúdo
+
 - **CSS** → layout, responsividade e animações
+
 - **JavaScript** → interações e controle de comportamento da interface
 
 Estrutura de arquivos:
