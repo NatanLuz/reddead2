@@ -59,15 +59,6 @@ reddead2-project/
 ├── assets/
 │   └── imagens e ícones
 ```
-
----
-
-## 🔐 Segurança
-
-- Aplicação estática (sem backend)
-- Ausência de manipulação de dados sensíveis
-- Baixa superfície de ataque por não depender de integrações críticas externas
-
 ---
 
 ## 🧰 Stack Tecnológica
