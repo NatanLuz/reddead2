@@ -66,8 +66,6 @@ document.querySelectorAll('.section > *').forEach(element => {
     observer.observe(element);
 });
 
-//por mais que nao desenvolva com js utilizar esses elementos, codigo em si foi essencial para a construçao do site xd
-
 // Menu com animação suave
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
